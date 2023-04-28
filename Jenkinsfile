@@ -12,10 +12,6 @@ pipeline{
                 script {
                     checkout scm
                     bat 'mvn package'
-                    bat 'dir /B /AD "target" > target.txt'
-                    def targetDir = readFile('target.txt').trim()
-                    bat 'del app.jar'
-                    bat "ren ${targetDir}\\swe645-hw3-0.0.1-SNAPSHOT.jar app.jar"
                 }
             }
         }
