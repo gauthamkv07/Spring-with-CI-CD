@@ -11,8 +11,8 @@ pipeline{
                 script {
                     checkout scm
                     bat 'mvn package'
-                    bat 'del target/app.jar'
                     bat 'cd target'
+                    bat 'del app.jar'
                     bat 'ren swe645-hw3-0.0.1-SNAPSHOT.jar app.jar'
                 }
             }
