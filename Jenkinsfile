@@ -13,6 +13,7 @@ pipeline{
                     bat 'mvn package'
                     dir('/Users/go2go/.jenkins/workspace/swe-645-hw3/target') {
                         bat 'dir'
+                        bat 'del app.jar'
                         bat 'ren swe645-hw3-0.0.1-SNAPSHOT.jar app.jar'
                     }
                 }
