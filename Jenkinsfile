@@ -6,7 +6,6 @@ pipeline{
         registry = 'kvmass/stuform'
     }
     stages{
-        //lol
         stage("Build war file") {
             steps {
                 script {
