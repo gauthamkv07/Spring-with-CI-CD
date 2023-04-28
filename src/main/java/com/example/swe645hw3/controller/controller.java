@@ -15,7 +15,7 @@ public class controller {
 	@Autowired
 	private StudentService studentService;
 	
-	@GetMapping(value="/getAll")
+	@GetMapping(value="/getAlls")
 	public List<Student> getAll() {
 		return studentService.findAll();
 	}
