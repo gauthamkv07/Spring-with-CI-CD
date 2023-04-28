@@ -12,7 +12,7 @@ pipeline{
                 script {
                     checkout scm
                     bat 'mvn package'
-                    dir('C:\Users\go2go\.jenkins\workspace\swe-645-hw3\target') {
+                    dir('/target') {
                         bat 'dir'
                     }
                 }
