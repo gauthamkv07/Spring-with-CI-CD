@@ -12,6 +12,8 @@ pipeline{
                 script {
                     checkout scm
                     bat 'mvn package'
+                    bat 'cd target'
+                    bat 'dir'
                 }
             }
         }
