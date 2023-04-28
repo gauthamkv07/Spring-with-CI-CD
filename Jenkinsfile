@@ -35,10 +35,10 @@ pipeline{
                 }
             }
         }
-        // stage("Deploying to  pod"){
-        //     steps{
-        //         bat "kubectl set image deployment/hw2-645-swe container-0=kvmass/stusurvey:${env.TIMESTAMP}"
-        //     }
-        // }
+        stage("Deploying to  pod"){
+            steps{
+                bat "kubectl set image deployment/swe-645-hw3 container-0=kvmass/stuform:${env.TIMESTAMP}"
+            }
+        }
     }
 }
